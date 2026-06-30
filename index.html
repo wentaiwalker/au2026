@@ -127,6 +127,34 @@ footer{text-align:center;padding:32px 16px;font-size:12px;color:#aaa;border-top:
 .melwrap .box a{color:var(--blue);}
 @media(max-width:560px){.item{flex-direction:column;}.time{width:100%;flex-direction:row;gap:8px;padding:8px;border-right:none;border-bottom:2px solid #eef0f3;}}
 
+/* === AI 行程小幫手 === */
+#ai-helper{max-width:960px;margin:0 auto;padding:18px 16px 0;}
+.ai-card{background:linear-gradient(135deg,#0d8a6e 0%,#1a6fa8 100%);border-radius:16px;padding:2px;box-shadow:0 6px 22px rgba(26,111,168,0.22);}
+.ai-inner{background:#fff;border-radius:14px;padding:18px 18px 16px;}
+.ai-head{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+.ai-head .ai-emoji{font-size:1.6em;line-height:1;}
+.ai-head h3{font-size:1.15em;color:#1a2a3a;font-weight:700;}
+.ai-head .ai-badge{margin-left:auto;font-size:11px;background:#e4f5f0;color:#0d8a6e;padding:3px 10px;border-radius:20px;font-weight:700;white-space:nowrap;}
+.ai-sub{font-size:12.5px;color:#888;margin-bottom:12px;}
+.ai-inputrow{display:flex;gap:8px;flex-wrap:wrap;}
+#ai-q{flex:1;min-width:180px;font-size:15px;font-family:inherit;padding:11px 14px;border:1.5px solid #d8e2ea;border-radius:10px;outline:none;transition:border-color .15s;}
+#ai-q:focus{border-color:#1a6fa8;}
+#ai-send{font-size:15px;font-weight:700;font-family:inherit;color:#fff;background:#1a6fa8;border:none;border-radius:10px;padding:11px 22px;cursor:pointer;transition:background .15s;}
+#ai-send:hover{background:#15577f;}
+#ai-send:disabled{background:#9bb8cc;cursor:not-allowed;}
+.ai-examples{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.ai-chip{font-size:12.5px;background:#f0f4f8;color:#3a6080;border:1px solid #e0e8f0;border-radius:16px;padding:5px 12px;cursor:pointer;transition:background .15s;}
+.ai-chip:hover{background:#e2ecf5;}
+#ai-answer{margin-top:14px;font-size:14px;line-height:1.75;color:#333;background:#f7fafc;border:1px solid #e6eef4;border-radius:10px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;display:none;}
+#ai-answer.show{display:block;}
+#ai-answer.err{background:#fdeaea;border-color:#f5c0c0;color:#a33;}
+.ai-loading{display:inline-flex;align-items:center;gap:8px;color:#1a6fa8;font-size:13px;}
+.ai-dot{width:7px;height:7px;border-radius:50%;background:#1a6fa8;display:inline-block;animation:aiblink 1s infinite both;}
+.ai-dot:nth-child(2){animation-delay:.2s;}.ai-dot:nth-child(3){animation-delay:.4s;}
+@keyframes aiblink{0%,80%,100%{opacity:.25;}40%{opacity:1;}}
+.ai-disclaimer{font-size:11px;color:#aaa;margin-top:8px;}
+@media(max-width:600px){.ai-head h3{font-size:1.05em;}#ai-send{padding:11px 18px;}}
+
 </style>
 </head>
 <body>
@@ -145,6 +173,30 @@ footer{text-align:center;padding:32px 16px;font-size:12px;color:#aaa;border-top:
 <span class="tag">🏖️ Bondi海崖</span>
 <span class="tag">⛰️ 藍山</span>
 </div>
+</div>
+<!-- === AI 行程小幫手 === -->
+<div id="ai-helper">
+<div class="ai-card"><div class="ai-inner">
+<div class="ai-head">
+<span class="ai-emoji">🤖</span>
+<h3>澳洲旅遊 AI 小幫手</h3>
+<span class="ai-badge">Gemini · 即時問答</span>
+</div>
+<div class="ai-sub">關於這趟行程的任何問題都可以問我，我會根據這份旅遊書回答你 👇</div>
+<div class="ai-inputrow">
+<input id="ai-q" type="text" placeholder="例如：Day3 有哪些景點？藍山那天要開車嗎？" autocomplete="off">
+<button id="ai-send" type="button">問問看</button>
+</div>
+<div class="ai-examples">
+<span class="ai-chip">Day3 有哪些景點？</span>
+<span class="ai-chip">藍山那天要開車嗎？</span>
+<span class="ai-chip">墨爾本有什麼推薦餐廳？</span>
+<span class="ai-chip">哪幾天會看到企鵝？</span>
+<span class="ai-chip">還沒訂的有哪些？</span>
+</div>
+<div id="ai-answer"></div>
+<div class="ai-disclaimer">AI 回答僅供參考，實際請以行程書與正式預訂為準。</div>
+</div></div>
 </div>
 <div class="container">
 <div class="section-title" id="overview"><span class="icon" style="background:#1a6fa8;">📋</span>行程總覽</div>
@@ -752,6 +804,68 @@ footer{text-align:center;padding:32px 16px;font-size:12px;color:#aaa;border-top:
 
 </div>
 <footer>澳洲自駕旅遊書 · 2026/7/24–8/3 · 雪梨5天+Jervis Bay+墨爾本 · 四人家庭<br>本版：雪梨深度5天、Jervis Bay兩天一夜、飛墨爾本（墨爾本段待續）</footer>
+<script>
+(function(){
+  // Cloudflare Worker 代理（金鑰存在 CF 後端，不在此檔案）
+  const AI_ENDPOINT = "https://au2026-ai.wentaiwalker.workers.dev";
+
+  const q = document.getElementById('ai-q');
+  const send = document.getElementById('ai-send');
+  const ans = document.getElementById('ai-answer');
+
+  // 載入時擷取一次網頁可見文字，作為 AI 回答的依據（grounding）
+  let pageContext = "";
+  function buildContext(){
+    const t = (document.body.innerText || "").replace(/[ \t]{2,}/g,' ').replace(/\n{3,}/g,'\n\n').trim();
+    pageContext = t.slice(0, 48000);
+  }
+
+  function showLoading(){
+    send.disabled = true;
+    ans.className = 'show';
+    ans.innerHTML = '<span class="ai-loading">小幫手思考中<span class="ai-dot"></span><span class="ai-dot"></span><span class="ai-dot"></span></span>';
+  }
+  function showAnswer(text, isErr){
+    ans.className = 'show' + (isErr ? ' err' : '');
+    ans.textContent = text;
+  }
+
+  async function ask(){
+    const question = (q.value || '').trim();
+    if(!question){ q.focus(); return; }
+    if(AI_ENDPOINT.indexOf('__AI_ENDPOINT__') !== -1){
+      showAnswer('⚠️ AI 服務尚未設定完成（缺少後端網址）。', true);
+      return;
+    }
+    if(!pageContext) buildContext();
+    showLoading();
+    try{
+      const r = await fetch(AI_ENDPOINT, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ question: question, context: pageContext })
+      });
+      const data = await r.json().catch(function(){ return {}; });
+      if(!r.ok || data.error){
+        showAnswer('⚠️ ' + (data.error || ('發生錯誤（' + r.status + '）')), true);
+      } else {
+        showAnswer(data.answer || '（沒有收到回答）', false);
+      }
+    } catch(e){
+      showAnswer('⚠️ 無法連線，請檢查網路後再試一次。', true);
+    } finally {
+      send.disabled = false;
+    }
+  }
+
+  send.addEventListener('click', ask);
+  q.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); ask(); } });
+  document.querySelectorAll('.ai-chip').forEach(function(c){
+    c.addEventListener('click', function(){ q.value = c.textContent; ask(); });
+  });
+  window.addEventListener('load', buildContext);
+})();
+</script>
 </body>
 </html>
 
