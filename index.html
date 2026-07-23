@@ -774,7 +774,7 @@ html{scroll-padding-top:60px;} /* 錨點跳轉時預留 sticky 導覽列高度 *
   // 先做 HTML escape 再轉簡易 markdown（**粗體**），避免星號原样顯示也確保安全
   function mdLite(text){
     const esc = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    return esc.replace(/\*\*([^*\n]+)\*\*/g,'<b>$1</b>').replace(/(^|\n)\s*[*•]\s+/g,'$1・');
+    return esc.replace(/\*\*([^*\n]+)\*\*/g,'<b>$1</b>').replace(/(^|\n)#{1,4}\s*([^\n]+)/g,'$1<b>$2</b>').replace(/(^|\n)\s*[*•]\s+/g,'$1・');
   }
   function showAnswer(text, isErr){
     ans.className = 'show' + (isErr ? ' err' : '');
