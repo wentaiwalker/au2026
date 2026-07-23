@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>澳洲自駕旅遊書 2026｜雪梨深度+大太平洋自駕+墨爾本 7/24–8/3</title>
+<style>
+:root{--blue:#1a6fa8;--blue-light:#e8f4fd;--teal:#0d8a6e;--teal-light:#e4f5f0;--amber:#c87d10;--amber-light:#fdf3e3;--coral:#c94040;--coral-light:#fdeaea;--purple:#6b42b8;--purple-light:#f0ebfc;--green:#2e7d32;--green-light:#e8f5e9;--gray:#4a4a4a;--gray-light:#f5f5f5;--border:#e0e0e0;--font:'Helvetica Neue','Noto Sans TC',Arial,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font);color:#333;background:#fafafa;font-size:15px;line-height:1.7;}
+.topnav{background:#1a2a3a;position:sticky;top:0;z-index:100;padding:0 20px;display:flex;gap:4px;overflow-x:auto;}
+.topnav a{color:#ccc;text-decoration:none;padding:12px 14px;font-size:13px;white-space:nowrap;border-bottom:3px solid transparent;}
+.topnav a:hover,.topnav a.active{color:#fff;border-bottom-color:#4ab8e0;}
+.hero{background:linear-gradient(135deg,#1a4a1a 0%,#2e7d32 40%,#1a6fa8 100%);color:white;padding:60px 24px 40px;text-align:center;}
+.hero h1{font-size:2.4em;font-weight:700;letter-spacing:0.05em;margin-bottom:10px;}
+.hero .sub{font-size:1.1em;opacity:0.85;margin-bottom:20px;}
+.hero .meta{display:inline-flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+.hero .tag{background:rgba(255,255,255,0.18);border-radius:20px;padding:5px 14px;font-size:13px;}
+.container{max-width:960px;margin:0 auto;padding:0 16px;}
+.section-title{font-size:1.5em;font-weight:700;color:#1a2a3a;padding:32px 0 16px;border-bottom:2px solid var(--border);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.section-title .icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;}
+.day-block{margin-bottom:32px;}
+.day-header{border-radius:12px 12px 0 0;padding:16px 20px;color:white;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.day-header h2{font-size:1.2em;font-weight:700;}
+.day-header .day-sub{font-size:13px;opacity:0.9;}
+.day-body{background:white;border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;padding:0;overflow:hidden;}
+.spot{display:flex;gap:0;border-bottom:1px solid #f0f0f0;}
+.spot:last-child{border-bottom:none;}
+.spot-content{flex:1;padding:14px 18px;}
+.spot-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.spot-name{font-size:1.05em;font-weight:700;color:#1a2a3a;}
+.badges{display:flex;gap:5px;flex-wrap:wrap;}
+.badge{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500;white-space:nowrap;}
+.spot-desc{font-size:13.5px;color:#555;line-height:1.6;margin-bottom:8px;}
+.spot-quote{font-size:12.5px;color:#777;font-style:italic;border-left:3px solid #ddd;padding-left:10px;margin-bottom:8px;}
+.spot-info{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.info-chip{font-size:12px;background:var(--gray-light);border-radius:6px;padding:3px 9px;color:#555;display:flex;align-items:center;gap:4px;text-decoration:none;}
+.info-chip.map{background:#e8f4fd;color:var(--blue);}
+.info-chip.book{background:#e8f5e9;color:var(--green);}
+.meals{background:#fffdf5;border-top:1px dashed #e8d8a0;padding:16px 20px;}
+.meals-title{font-size:13px;font-weight:700;color:var(--amber);margin-bottom:10px;letter-spacing:0.04em;}
+.meal-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
+.meal-label{font-size:12px;font-weight:700;width:36px;flex-shrink:0;padding-top:2px;}
+.meal-label.breakfast{color:#e07010;}.meal-label.lunch{color:#2080c0;}.meal-label.dinner{color:#8040b0;}
+.meal-text{font-size:13px;color:#555;flex:1;}
+.type-nature{background:var(--teal-light);color:var(--teal);}
+.type-beach{background:#e0f0ff;color:#1060a0;}
+.type-food{background:#ffe8e0;color:#c04020;}
+.type-culture{background:#f0e8ff;color:#6040a0;}
+.type-wildlife{background:#e8f5e9;color:#2e7d32;}
+.type-drive{background:#fff3e0;color:#e65100;}
+.type-shopping{background:var(--amber-light);color:var(--amber);}
+.type-city{background:#e3f2fd;color:#1565c0;}
+.type-warning{background:#fff8e1;color:#f57f17;}
+.tips-box{background:#fff9e6;border:1px solid #f0d880;border-radius:10px;padding:16px 18px;margin:16px 0;}
+.tips-box .tips-title{font-weight:700;color:var(--amber);margin-bottom:8px;font-size:14px;}
+.tips-box ul{padding-left:18px;font-size:13.5px;color:#555;}
+.tips-box ul li{margin-bottom:4px;}
+.addr-table{width:100%;border-collapse:collapse;font-size:13px;margin:16px 0;}
+.addr-table th{background:#1a2a3a;color:white;padding:8px 12px;text-align:left;}
+.addr-table td{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top;}
+.addr-table tr:nth-child(even) td{background:#f8f8f8;}
+@media(max-width:600px){.hero h1{font-size:1.8em;}.spot{flex-direction:column;}.day-header{flex-direction:column;}}
+.d1{background:#1565c0;}.d2{background:#1565c0;}.d3{background:#1565c0;}.d4{background:#0d8a6e;}.d5{background:#6b42b8;}.d6{background:#c87d10;}.d7{background:#2e7d32;}.d8{background:#c94040;}.d9{background:#00838f;}.d10{background:#4527a0;}.d11{background:#37474f;}
+.cover-stat{text-align:center;padding:24px 0 8px;}
+.stats-row{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:16px 0 32px;}
+.cover-stat .num{font-size:2em;font-weight:700;color:var(--blue);}
+.cover-stat .label{font-size:13px;color:#777;}
+footer{text-align:center;padding:32px 16px;font-size:12px;color:#aaa;border-top:1px solid var(--border);margin-top:40px;}
+.hotel{background:#f0ebfc;border:1px solid #d1b8f8;border-radius:10px;padding:14px 18px;margin:12px 18px 18px;display:flex;align-items:flex-start;gap:14px;}
+.hotel-icon{font-size:1.6em;flex-shrink:0;margin-top:2px;}
+.hotel-label{font-size:11px;font-weight:700;color:#6b42b8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+.hotel-name{font-size:15px;font-weight:700;color:#3d1f7a;margin-bottom:4px;}
+.hotel-desc{font-size:13px;color:#555;line-height:1.65;}
+.infobox{border-radius:10px;padding:14px 18px;margin:14px 18px;}
+.infobox.flight{background:#e8f4fd;border:1px solid #b8dcf5;}
+.infobox.car{background:#fdf3e3;border:1px solid #f0d880;}
+.infobox.warn{background:#fdeaea;border:1px solid #f5c0c0;}
+.infobox h4{font-size:14px;margin-bottom:8px;color:#1a2a3a;}
+.infobox p{font-size:13px;color:#555;margin-bottom:3px;}
+.ov-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0;background:white;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06);}
+.ov-table th{background:#1a2a3a;color:white;padding:10px 12px;text-align:left;font-size:13px;}
+.ov-table td{padding:9px 12px;border-bottom:1px solid #eee;vertical-align:top;}
+.ov-table tr:nth-child(even) td{background:#f8f9fb;}
+.ov-table .day-col{font-weight:700;color:var(--blue);white-space:nowrap;}
+.ov-table .km{color:#e65100;font-size:12px;white-space:nowrap;}
+
+/* === 墨爾本自訂區塊樣式 === */
+.melwrap *{box-sizing:border-box;margin:0;padding:0;}
+.melwrap .day-head{border-radius:12px 12px 0 0;padding:18px 22px;color:white;margin-top:28px;}
+.melwrap .day-head h2{font-size:1.3em;font-weight:700;}
+.melwrap .day-head .ds{font-size:13.5px;opacity:0.9;margin-top:4px;}
+.melwrap .day-body{background:white;border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;padding:14px 0;}
+.melwrap .item{margin:0;display:flex;border-bottom:1px solid #f0f0f0;}
+.melwrap .item:last-child{border-bottom:none;}
+.melwrap .time{flex-shrink:0;width:88px;background:#f7f8fa;color:#1a2a3a;padding:14px 8px;text-align:center;font-weight:700;font-size:14px;display:flex;flex-direction:column;justify-content:center;gap:3px;border-right:2px solid #eef0f3;}
+.melwrap .time .dur{font-size:11px;opacity:0.7;font-weight:400;}
+.melwrap .body{flex:1;padding:14px 18px;}
+.melwrap .body h3{font-size:1.05em;color:#1a2a3a;margin-bottom:6px;}
+.melwrap .body p{font-size:13.5px;color:#555;margin-bottom:8px;}
+.melwrap .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.melwrap .chip{font-size:12px;background:#f0f0f0;border-radius:6px;padding:3px 9px;color:#555;text-decoration:none;}
+.melwrap .chip.map{background:#e8f4fd;color:var(--blue);}
+.melwrap .chip.eat{background:#ffe8e0;color:#c04020;}
+.melwrap .chip.star{background:#e4f5f0;color:var(--teal);font-weight:700;}
+.melwrap .drive{font-size:12.5px;color:#e65100;padding:6px 18px;background:#fff8f0;}
+.melwrap .box{border-radius:10px;padding:14px 18px;margin:14px 0;}
+.melwrap .box.warn{background:#fdeaea;border:1px solid #f5c0c0;}
+.melwrap .box.tip{background:#fff9e6;border:1px solid #f0d880;}
+.melwrap .box.info{background:#e8f4fd;border:1px solid #b8dcf5;}
+.melwrap .box h4{font-size:14px;margin-bottom:8px;color:#1a2a3a;}
+.melwrap .box ul{padding-left:18px;font-size:13px;color:#555;}
+.melwrap .box li{margin-bottom:5px;}
+.melwrap .box a{color:var(--blue);}
+@media(max-width:560px){.melwrap .item{flex-direction:column;}.melwrap .time{width:100%;flex-direction:row;gap:8px;padding:8px;border-right:none;border-bottom:2px solid #eef0f3;}}
+
+/* === AI 行程小幫手 === */
+#ai-helper{max-width:960px;margin:0 auto;padding:18px 16px 0;}
+.ai-card{background:linear-gradient(135deg,#0d8a6e 0%,#1a6fa8 100%);border-radius:16px;padding:2px;box-shadow:0 6px 22px rgba(26,111,168,0.22);}
+.ai-inner{background:#fff;border-radius:14px;padding:18px 18px 16px;}
+.ai-head{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+.ai-head .ai-emoji{font-size:1.6em;line-height:1;}
+.ai-head h3{font-size:1.15em;color:#1a2a3a;font-weight:700;}
+.ai-head .ai-badge{margin-left:auto;font-size:11px;background:#e4f5f0;color:#0d8a6e;padding:3px 10px;border-radius:20px;font-weight:700;white-space:nowrap;}
+.ai-sub{font-size:12.5px;color:#888;margin-bottom:12px;}
+.ai-inputrow{display:flex;gap:8px;flex-wrap:wrap;}
+html{scroll-padding-top:60px;} /* 錨點跳轉時預留 sticky 導覽列高度 */
+#ai-q{flex:1;min-width:180px;font-size:16px;font-family:inherit;padding:11px 14px;border:1.5px solid #d8e2ea;border-radius:10px;outline:none;transition:border-color .15s;} /* 16px 起跳，避免 iOS 點擊自動放大 */
+#ai-q:focus{border-color:#1a6fa8;}
+#ai-send{font-size:15px;font-weight:700;font-family:inherit;color:#fff;background:#1a6fa8;border:none;border-radius:10px;padding:11px 22px;cursor:pointer;transition:background .15s;}
+#ai-send:hover{background:#15577f;}
+#ai-send:disabled{background:#9bb8cc;cursor:not-allowed;}
+.ai-examples{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.ai-chip{font-size:12.5px;background:#f0f4f8;color:#3a6080;border:1px solid #e0e8f0;border-radius:16px;padding:5px 12px;cursor:pointer;transition:background .15s;}
+.ai-chip:hover{background:#e2ecf5;}
+#ai-answer{margin-top:14px;font-size:14px;line-height:1.75;color:#333;background:#f7fafc;border:1px solid #e6eef4;border-radius:10px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;display:none;scroll-margin-top:70px;}
+#ai-answer b{color:#1a2a3a;}
+#ai-answer.show{display:block;}
+#ai-answer.err{background:#fdeaea;border-color:#f5c0c0;color:#a33;}
+.ai-loading{display:inline-flex;align-items:center;gap:8px;color:#1a6fa8;font-size:13px;}
+.ai-dot{width:7px;height:7px;border-radius:50%;background:#1a6fa8;display:inline-block;animation:aiblink 1s infinite both;}
+.ai-dot:nth-child(2){animation-delay:.2s;}.ai-dot:nth-child(3){animation-delay:.4s;}
+@keyframes aiblink{0%,80%,100%{opacity:.25;}40%{opacity:1;}}
+.ai-disclaimer{font-size:11px;color:#aaa;margin-top:8px;}
+@media(max-width:600px){.ai-head h3{font-size:1.05em;}#ai-send{padding:11px 18px;}}
+
+</style>
+</head>
+<body>
+<div class="topnav">
+<a href="#overview">總覽</a>
+<a href="#day1">Day1</a><a href="#day2">Day2</a><a href="#day3">Day3</a><a href="#day4">Day4</a><a href="#day5">Day5</a><a href="#day6">Day6</a><a href="#day7">Day7</a><a href="#day8">Day8</a><a href="#day9">Day9</a><a href="#day10">Day10</a><a href="#day11">Day11</a>
+<a href="#tips">自駕貼士</a><a href="#shopping">購物</a>
+</div>
+<div class="hero">
+<h1>🦘 澳洲雪墨雙城自駕旅遊書 (地圖強強版)</h1>
+<div class="sub">雪梨深度自駕 + 大太平洋公路 ➔ 飛墨爾本 ➔ 企鵝島自駕</div>
+<div class="meta">
+<span class="tag">📅 2026/7/24 – 8/3</span>
+<span class="tag">🚗 11天10夜</span>
+<span class="tag">👨‍👩‍👧‍👧 四人家庭</span>
+<span class="tag">⛰️ 藍山一日</span>
+<span class="tag">🐧 菲利普島企鵝</span>
+</div>
+</div>
+<!-- === AI 行程小幫手 === -->
+<div id="ai-helper">
+<div class="ai-card"><div class="ai-inner">
+<div class="ai-head">
+<span class="ai-emoji">🤖</span>
+<h3>澳洲旅遊 AI 小幫手</h3>
+<span class="ai-badge">Gemini · 即時問答</span>
+</div>
+<div class="ai-sub">關於這趟行程的任何問題都可以問我，我會根據這份旅遊書回答你 👇</div>
+<div class="ai-inputrow">
+<input id="ai-q" type="text" placeholder="例如：Day3 有哪些景點？藍山那天要開車嗎？" autocomplete="off">
+<button id="ai-send" type="button">問問看</button>
+</div>
+<div class="ai-examples">
+<span class="ai-chip">Day3 有哪些景點？</span>
+<span class="ai-chip">藍山那天要開車嗎？</span>
+<span class="ai-chip">大太平洋公路怎麼玩？</span>
+<span class="ai-chip">哪幾天會看到企鵝？</span>
+<span class="ai-chip">墨爾本有什麼推薦餐廳？</span>
+</div>
+<div id="ai-answer"></div>
+<div class="ai-disclaimer">AI 回答僅供參考，實際請以行程書與正式預訂為準。</div>
+</div></div>
+</div>
+<div class="container">
+<div class="section-title" id="overview"><span class="icon" style="background:#1a6fa8;">📋</span>行程總覽</div>
+<div class="stats-row">
+<div class="cover-stat"><div class="num">11</div><div class="label">天 10 夜</div></div>
+<div class="cover-stat"><div class="num">5</div><div class="label">天雪梨深度</div></div>
+<div class="cover-stat"><div class="num">2</div><div class="label">州 NSW+VIC</div></div>
+<div class="cover-stat"><div class="num">✈️</div><div class="label">國內雙向接駁</div></div>
+</div>
+<table class="ov-table">
+<tr><th>日期</th><th>行程</th><th>車程</th><th>亮點與快速導航連結</th></tr>
+<tr><td class="day-col">7/24 Day 1<br>週五</td><td>落地雪梨→CBD飯店放行李→市區漫步</td><td class="km">不開車</td><td>10:45落地・QVB・Westfield・Stüssy潮流採購</td></tr>
+<tr><td class="day-col">7/25 Day 2<br>週六</td><td>雪梨經典市集與地標</td><td class="km">步行/輕軌</td><td>週六限定 The Rocks 市集・海港大橋・植物園夕陽歌劇院</td></tr>
+<tr><td class="day-col">7/26 Day 3<br>週日</td><td>大太平洋公路一日遊（當天往返）</td><td class="km">~3.5hr</td><td>海崖大橋・凱阿瑪噴水洞・Berry 文青小鎮美食</td></tr>
+<tr><td class="day-col">7/27 Day 4<br>週一</td><td>藍山一日自駕遊</td><td class="km">~3hr</td><td>9:00衝第一波三大纜車・三姊妹岩・下山順路逛 DFO Homebush</td></tr>
+<tr><td class="day-col">7/28 Day 5<br>週二</td><td>雪梨學術與生態日</td><td class="km">~1hr</td><td>雪梨魚市場龍蝦餐・雪梨大學魔法大樓拍照・塔龍加動物園夕陽</td></tr>
+<tr><td class="day-col">7/29 Day 6<br>週三</td><td>雪梨Checkout➔飛墨爾本</td><td class="km">✈️轉場</td><td>12:00還車・JQ519 飛 MEL・17:00墨爾本取車・入住 AURA</td></tr>
+<tr><td class="day-col">7/30 Day 7<br>週四</td><td>丹頂農童話小鎮+企鵝島（超流暢一日遊）</td><td class="km">~4hr</td><td>避開週末人潮・Olinda童話小鎮・瑪魯動物園餵袋鼠・震撼版企鵝歸巢</td></tr>
+<tr><td class="day-col">7/31 Day 8<br>週五</td><td>墨爾本 CBD 藝文探秘</td><td class="km">免費電車</td><td>QV Market 買咖啡豆・Degraves 咖啡街・Hosier 塗鴉巷・天空塔夜景</td></tr>
+<tr><td class="day-col">8/1 Day 9<br>週六</td><td>Fitzroy 文青市集與墨爾本冬夜限定活動</td><td class="km">電車</td><td>Lune神級可頌・Rose St藝術市集・St Kilda海灘・傍晚冬夜活動二選一</td></tr>
+<tr><td class="day-col">8/2 Day 10<br>週日</td><td>墨爾本最後一整天（神卡雙備案）</td><td class="km">視方案</td><td>方案A (彩虹小屋+最大商場大採購) 或 方案B (亞拉河谷美酒美食+巧克力)</td></tr>
+<tr><td class="day-col">8/3 Day 11<br>週一</td><td>墨爾本Checkout➔雪梨➔台北</td><td class="km">✈️返台</td><td>12:30還車・15:00 JQ520飛雪梨・22:10 華航直飛回台</td></tr>
+</table>
+
+<div class="tips-box" style="background:#e8f4fd;border-color:#b8dcf5;"><div class="tips-title" style="color:#1565c0;">📌 2026/7 終極定案版修正重點</div>
+<ul>
+<li><b>因禍得福！Day 7 企鵝島黃金升級</b>：取消蒸汽火車，改走「丹頂農童話小鎮 + 瑪魯野生動物園 (親手餵袋鼠) + 菲利普島企鵝歸巢」。不僅避開週末人潮、動線完全順路、自駕時間極度悠閒，更徹底釋放了 Day 10 的一整天時間！</li>
+<li><b>Day 9 傍晚防寒二選一</b>：免去冷風刺骨的 St Kilda 野生企鵝[cite: 1]，傍晚直接切換至「皇家植物園 Lightscape 光影夜（2026閉幕壓軸）」或「亞拉河南岸巨型火焰秀＋Lygon 街義式窯烤披薩大餐」，當天看天氣與體力現場決定[cite: 1]。</li>
+<li><b>Day 10 雙料神卡備案保留</b>：這天完全屬於你們！上午看全家心情與天氣，決定要去「彩虹小屋拍照＋Chadstone 瘋狂大採購」還是「亞拉河谷頂級酒莊 Domaine Chandon 午餐品酒＋手工巧克力工坊」[cite: 1]。</li>
+<li><b>安全級數 100% 國內線銜接</b>：最後一天 (8/3) 下午 15:00 的 JQ520 飛回雪梨[cite: 1]，抵達雪梨為 16:25，距離 22:10 的回台班機有將近 6 小時的完美緩衝[cite: 1]。免去塞車和誤機擔憂，退稅也極度從容[cite: 1]！</li>
+</ul></div>
+
+
+<!-- DAY 1 -->
+<div class="day-block" id="day1">
+<div class="day-header d1"><div><h2>Day 1 ｜ 7月24日（週五）</h2><div class="day-sub">雪梨機場抵達 → CBD 商場散步日（全程步行，不開車）</div></div><div class="day-sub">10:45落地・13:00取車</div></div>
+<div class="day-body">
+
+<div class="infobox flight"><h4>✈|去程航班｜QF8730（澳洲航空，實際由中華航空營運）</h4>
+<p>📍 台北桃園 TPE 航廈2 → 雪梨 SYD 航廈1</p>
+<p>🕙 出發 2026-07-23 23:30（前一晚）／抵達 2026-07-24 10:45</p>
+<p>✈️ A350-900・直飛9小時15分・託運30kg</p></div>
+
+<div class="infobox car" style="background:#e8f5e9; border-color:#c8e6c9;"><h4>🚗 雪梨取車指引｜Agoda 預訂（Ted 預訂）</h4>
+<p>🚗 機場取車點：Everything Fleet 租車櫃檯（或預訂對應車商）</p>
+<p>🕙 <b>取車：7/24（週五）13:00</b> ／ <b>還車：7/29（週三）12:00</b>（比預定13:00提前，符合轉機時間）</p>
+<p>📍 大概位置：雪梨機場周邊取車點（店家提供接駁巴士服務）[cite: 1] ➔ <a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Everything+Fleet+Sydney+Airport" target="_blank">🗺️ 導航至取車點</a></p>
+<p>💡 取車後<b>先把車開回 YEHS Hotel 辦理 Check-in 並停妥</b>，今日在市區以大眾運輸/步行爲主。</p></div>
+
+<div class="tips-box" style="background:#e3f2fd;border-color:#90caf9;"><div class="tips-title" style="color:#1565c0;">🚶 今日為「CBD 商場步行日」</div><ul><li>抵達飯店放完行李後，今天<b>不開車</b>。以下所有點都在 CBD 核心，彼此<b>步行 5–12 分鐘</b>可達，是長途飛行後最輕鬆的暖身行程。</li></ul></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🍔 Five Guys 漢堡（午餐）</span><span class="badges"><span class="badge type-food">美式漢堡</span><span class="badge type-city">CBD</span></span></div>
+<div class="spot-desc">第一餐，來份份量十足、多汁美味的招牌美式漢堡，配上一杯花生醬奶昔，迅速補足體力！</div>
+<div class="spot-info">
+<span class="info-chip">大概位置：雪梨 CBD George St 與 World Square 一帶</span>[cite: 1]
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Five+Guys+George+St+Sydney" target="_blank">🗺️ 導航導至店家</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🏛️ QVB 維多利亞女王購物大樓</span><span class="badges"><span class="badge type-shopping">古典商場</span><span class="badge type-culture">百年建築</span></span></div>
+<div class="spot-desc">1898 年落成的羅馬式建築，被譽為「全球最美購物中心」。彩繪玻璃、馬賽克地磚、古董大鐘，拍照逛街兩相宜。</div>
+<div class="spot-info">
+<span class="info-chip">🕙 約9:00–18:00</span>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Queen+Victoria+Building+Sydney" target="_blank">🗺️ 導航至 QVB</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🧢 Stüssy Sydney + Culture Kings 潮流區</span><span class="badges"><span class="badge type-shopping">潮流</span><span class="badge type-city">女兒最愛</span></span></div>
+<div class="spot-desc">傍晚往潮流區走，<b>Stüssy Sydney</b> 與 <b>Culture Kings</b>（大型潮流概念店，帽款與街頭品牌超齊全，店內氣氛像夜店）是兩個女兒一定會逛得很開心的熱點。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Stussy+Sydney" target="_blank">🧢 Stüssy 導航</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Culture+Kings+Sydney" target="_blank">🧢 Culture Kings 導航</a>
+</div>
+</div></div>
+
+<div class="meals"><div class="meals-title">🍽 DAY 1 餐飲</div>
+<div class="meal-row"><span class="meal-label breakfast">早</span><span class="meal-text">機上用餐</span></div>
+<div class="meal-row"><span class="meal-label lunch">午</span><span class="meal-text">Five Guys 美式漢堡（雪梨 CBD George St 一帶，招牌美式漢堡與薯條）</span></div>
+<div class="meal-row"><span class="meal-label dinner">晚</span><span class="meal-text">達令港 Cockle Bay Wharf 海港餐廳，吹海風看夜景 ➔ <a href="https://www.google.com/maps/search/?api=1&query=Cockle+Bay+Wharf+Sydney" target="_blank">🗺️ 導航至達令港美食區</a></span></div></div>
+
+<div class="hotel"><div class="hotel-icon">🏨</div><div><div class="hotel-label">雪梨住宿（連住 5 晚）</div><div class="hotel-name">YEHS Hotel Sydney Harbour Suites</div><div class="hotel-desc"><b>已訂✓</b> 大概位置：雪梨 CBD 核心區（市政廳與達令港旁）[cite: 1]。地理位置優越，鄰近 Town Hall、達令港及唐人街，適合家庭居住。<br>
+➔ <a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=YEHS+Hotel+Sydney+Harbour+Suites" target="_blank">🗺️ 導航至 YEHS 飯店</a> 
+｜ 🅿️ <a class="info-chip book" href="https://www.google.com/maps/search/?api=1&query=Wilson+Parking+383+Kent+St+Sydney" target="_blank">🅿️ 預訂停車場 (Wilson Kent St)</a></div></div></div>
+</div></div>
+
+
+<!-- DAY 2 -->
+<div class="day-block" id="day2">
+<div class="day-header d2"><div><h2>Day 2 ｜ 7月25日（週六）</h2><div class="day-sub">市區往北步行 → 環形碼頭 → The Rocks 岩石區 → 海港大橋 → 歌劇院</div></div><div class="day-sub">全程步行＋輕軌</div></div>
+<div class="day-body">
+
+<div class="tips-box" style="background:#e4f5f0;border-color:#9fe1cb;"><div class="tips-title" style="color:#0d8a6e;">📅 週六最熱鬧！The Rocks 市集正日子</div><ul>
+<li><b>週六市集營業時間為 10:00–17:00</b>，手工藝品、原創飾品、街頭美食最多，氣氛最棒。</li>
+</ul></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🛍️ The Rocks 岩石區 + 假日市集</span><span class="badges"><span class="badge type-culture">古老街區</span><span class="badge type-shopping">市集</span></span></div>
+<div class="spot-desc">雪梨最古老街區，鵝卵石巷弄和砂岩老建築復古又好拍。邊逛市集邊吃西班牙燉飯、聽現場音樂。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=The+Rocks+Market+Sydney" target="_blank">🗺️ 導航至岩石區市集</a>
+<a class="info-chip book" href="https://www.therocks.com/whats-on/market-overview" target="_blank">🔗 官網</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌉 海港大橋 Harbour Bridge 步行體驗</span><span class="badges"><span class="badge type-city">地標</span><span class="badge type-nature">海港全景</span></span></div>
+<div class="spot-desc">從 The Rocks 走上海港大橋人行道（免費），可以用最棒的角度俯瞰整個雪梨港與歌劇院。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=BridgeClimb+Sydney" target="_blank">🗺️ 導航至大橋攀爬步道入口</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🎡 Luna Park 月亮公園</span><span class="badges"><span class="badge type-city">復古樂園</span></span></div>
+<div class="spot-desc">過橋後下到北端 Milsons Point 的復古遊樂園，那張巨大的微笑臉是不可錯過的拍照背景。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Luna+Park+Sydney" target="_blank">🗺️ 導航至月亮公園</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🎭 雪梨歌劇院 Opera House + 皇家植物園</span><span class="badges"><span class="badge type-city">世界遺產</span><span class="badge type-nature">夕陽名勝</span></span></div>
+<div class="spot-desc">傍晚沿環形碼頭走到對岸的歌劇院。接著往麥覺理夫人石椅（Mrs Macquarie's Chair）前進，這裡是拍攝「歌劇院＋海港大橋」同框夕陽的黃金位置。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Sydney+Opera+House" target="_blank">🎭 歌劇院導航</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Mrs+Macquarie's+Chair" target="_blank">🌅 植物園夕陽拍照點導航</a>
+</div>
+</div></div>
+
+<div class="meals"><div class="meals-title">🍽 DAY 2 餐飲</div>
+<div class="meal-row"><span class="meal-label breakfast">早</span><span class="meal-text">飯店自理或 QVB 內咖啡店</span></div>
+<div class="meal-row"><span class="meal-label lunch">午</span><span class="meal-text">The Rocks 市集異國美食攤位邊吃邊逛</span></div>
+<div class="meal-row"><span class="meal-label dinner">晚</span><span class="meal-text"><b>Hurricane's Grill（達令港 Cockle Bay Wharf 店）</b> 招牌炭烤豬肋排與牛排，份量十足（建議提早訂位）➔ <a href="https://www.google.com/maps/search/?api=1&query=Hurricanes+Grill+Darling+Harbour" target="_blank">🗺️ 導航至餐廳</a></span></div></div>
+
+<div class="hotel"><div class="hotel-icon">🏨</div><div><div class="hotel-label">雪梨住宿</div><div class="hotel-name">YEHS Hotel Sydney Harbour Suites（續住）</div></div></div>
+</div></div>
+
+
+<!-- DAY 3 -->
+<div class="day-block" id="day3">
+<div class="day-header d3"><div><h2>Day 3 ｜ 7月26日（週日）</h2><div class="day-sub">大太平洋公路自駕一日遊（Grand Pacific Drive）</div></div><div class="day-sub">開車南下・單程約 1.5 ~ 2 小時</div></div>
+<div class="day-body">
+
+<div class="tips-box" style="background:#fff9e6;border-color:#f0d880;"><div class="tips-title" style="color:#c87d10;">🚗 自駕路線導航規劃</div><ul>
+<li>出發 ➔ 走 M1 南下 ➔ 轉大太平洋公路 (Grand Pacific Drive) ➔ <b>海崖大橋 (Sea Cliff Bridge)</b> ➔ <b>凱阿瑪 (Kiama)</b> ➔ <b>文青小鎮 Berry</b> ➔ 傍晚原路或走內陸快線回雪梨。</li>
+</ul></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌉 海崖大橋 Sea Cliff Bridge</span><span class="badges"><span class="badge type-drive">自駕聖地</span><span class="badge type-nature">懸空大橋</span></span></div>
+<div class="spot-desc">依山傍海而建的蛇形懸空大橋，全長665公尺，是澳洲最著名的汽車廣告拍攝地。可以把車停在橋頭，步行上橋走一段，拍出驚艷的海天一色。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Sea+Cliff+Bridge" target="_blank">🗺️ 導航至海崖大橋 (橋身)</a>
+</div>
+</div></div>
+
+<div class="spot" style="background:#fffdec;"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">⛰️ 海崖大橋觀景台 Sea Cliff Bridge Lookout (加碼點！)</span><span class="badges"><span class="badge type-nature">絕美俯瞰全景</span><span class="badge type-drive">內行拍照點</span></span></div>
+<div class="spot-desc"><b>【大橋南端步道入口】</b> 俯瞰整座橋樑蜿蜒在太平洋海岸與懸崖間的震撼全景。
+<br>💡 <b>位置說明：</b>導航至大橋南端 Coalcliff 側的停車小空地。從步道入口（近警告標誌處）進入灌木叢，往上攀爬約 10 至 15 分鐘的山路（山路陡峭且未鋪平，務必穿好走的鞋）。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Sea+Cliff+Bridge+Parking+Coalcliff" target="_blank">🅿️ 導航至 Coalcliff 側觀景台步道入口停車點</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌊 凱阿瑪噴水洞 Kiama Blowhole</span><span class="badges"><span class="badge type-nature">自然奇景</span></span></div>
+<div class="spot-desc">太平洋海浪湧入天然海蝕洞中，形成最高可達 30 公尺的天然水柱噴射奇觀，水聲如雷鳴，現場看非常震撼。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Kiama+Blowhole" target="_blank">🌊 噴水洞定位</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Kiama+Blowhole+Parking" target="_blank">🅿️ 導航至周邊免費停車場</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌸 歷史文青小鎮 Berry</span><span class="badges"><span class="badge type-culture">文青小鎮</span><span class="badge type-food">網紅烘焙</span></span></div>
+<div class="spot-desc">充滿維多利亞風格歷史建築的南海岸小鎮，主街有許多精緻手工店、古董鋪，以及超人氣的 **The Famous Berry Donut Van**。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=The+Famous+Berry+Donut+Van" target="_blank">🍩 導航至甜甜圈店餐車</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Berry+Town+Visitor+Information+Centre+Parking" target="_blank">🅿️ 導航至小鎮遊客中心停車場</a>
+</div>
+</div></div>
+
+<div class="meals"><div class="meals-title">🍽 DAY 3 餐飲</div>
+<div class="meal-row"><span class="meal-label breakfast">早</span><span class="meal-text">飯店自理</span></div>
+<div class="meal-row"><span class="meal-label lunch">午</span><span class="meal-text"><b>The Famous Berry Donut Van（Berry小鎮主街旁）</b> 手工現炸肉桂甜甜圈與熱飲餐車</span></div>
+<div class="meal-row"><span class="meal-label dinner">晚</span><span class="meal-text">回雪梨市區，在<b>唐人街 (Chinatown)</b> 吃一頓溫暖的亞洲熱湯麵 ➔ <a href="https://www.google.com/maps/search/?api=1&query=Chinatown+Sydney+Restaurants" target="_blank">🗺️ 導航至唐人街美食區</a></span></div></div>
+
+<div class="hotel"><div class="hotel-icon">🏨</div><div><div class="hotel-label">雪梨住宿</div><div class="hotel-name">YEHS Hotel Sydney Harbour Suites（續住）</div></div></div>
+</div></div>
+
+
+<!-- DAY 4 -->
+<div class="day-block" id="day4">
+<div class="day-header d4"><div><h2>Day 4 ｜ 7月27日（週一）</h2><div class="day-sub">藍山一日遊（自駕往返）→ 下山逛 DFO → 回市區</div></div><div class="day-sub">7:30出發・單程約1.5hr車程</div></div>
+<div class="day-body">
+
+<div class="tips-box" style="background:#e3f2fd;border-color:#90caf9;"><div class="tips-title" style="color:#1565c0;">🗓️ 藍山經典黃金時間軸</div><ul>
+<li>⏰ <b>務必 7:30 出發</b>！約 <b>9:00 Scenic World 一開門就到</b>，可以完美避開 10:00 後陸續抵達的大型旅行團，拍照、搭纜車都不卡關。</li>
+</ul></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🚠 Scenic World 纜車世界（三大纜車+雨林步道）</span><span class="badges"><span class="badge type-nature">必玩項目</span><span class="badge type-culture">提前購票</span></span></div>
+<div class="spot-desc">
+① **Skyway**：720米橫越峽谷，玻璃底部看萬丈深谷、遠眺三姊妹岩。<br>
+② **Railway**：52度極陡紅鐵軌俯衝谷底。<br>
+③ **Walkway**：10-20分鐘漫步谷底熱帶雨林。<br>
+④ **Cableway**：搭乘大纜車重返頂端。
+</div>
+<div class="spot-info">
+<span class="info-chip">🕙 每日9:00–17:00</span>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Scenic+World+Katoomba+Parking" target="_blank">🅿️ 導航至 Scenic World 大型免費停車場</a>
+<a class="info-chip book" href="https://www.scenicworld.com.au/tickets" target="_blank">🔗 預先訂票</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">⛰️ Echo Point 迴聲角觀景台 (三姊妹岩正面)</span><span class="badges"><span class="badge type-nature">經典地標</span></span></div>
+<div class="spot-desc">拍攝藍山標誌「三姊妹岩」最完美的正面觀景台，視野遼闊，藍霧繚繞。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Echo+Point+Three+Sisters+Katoomba" target="_blank">⛰️ 觀景台定位</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Echo+Point+Katoomba+Parking" target="_blank">🅿️ 導航至觀景台付費停車場</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌸 Leura 皇家花園小鎮</span><span class="badges"><span class="badge type-culture">最美小鎮</span></span></div>
+<div class="spot-desc">距離 Katoomba 僅10分鐘車程，主街有許多迷人的文青咖啡廳、手工糖果店與古董店，十分悠閒。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Leura+Mall+Blue+Mountains" target="_blank">🌸 導航至 Leura 主街</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Leura+Mall+Parking" target="_blank">🅿️ 導航至小鎮公共停車場</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🛍️ 下山順遊 DFO Homebush（傍晚購物）</span><span class="badges"><span class="badge type-shopping">Outlet</span><span class="badge type-shopping">順路</span></span></div>
+<div class="spot-desc">下山走 M4 公路會**完美順路經過**這家雪梨代表性的暢貨中心，16:30左右抵達，採購運動品牌、時裝與精品。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=DFO+Homebush" target="_blank">🛍️ 暢貨中心定位</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=DFO+Homebush+Parking" target="_blank">🅿️ 導航至商場入口停車場 (首2小時免費)</a>
+</div>
+</div></div>
+
+<div class="meals"><div class="meals-title">🍽 DAY 4 餐飲</div>
+<div class="meal-row"><span class="meal-label breakfast">早</span><span class="meal-text">自備簡單早餐</span></div>
+<div class="meal-row"><span class="meal-label lunch">午</span><span class="meal-text">Leura 小鎮特色派店，品嚐熱呼呼的經典奧式肉派（Meat Pie）</span></div>
+<div class="meal-row"><span class="meal-label dinner">晚</span><span class="meal-text">下山採購後回市區，在飯店附近享用<b>雪梨特色酒館餐</b>或大排檔</span></div></div>
+
+<div class="hotel"><div class="hotel-icon">🏨</div><div><div class="hotel-label">雪梨住宿</div><div class="hotel-name">YEHS Hotel Sydney Harbour Suites（續住）</div></div></div>
+</div></div>
+
+
+<!-- DAY 5 -->
+<div class="day-block" id="day5">
+<div class="day-header d5"><div><h2>Day 5 ｜ 7月28日（週二）</h2><div class="day-sub">雪梨魚市場 → 雪梨大學 → 塔龍加動物園日落</div></div><div class="day-sub">自駕/渡輪結合</div></div>
+<div class="day-body">
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🦐 Sydney Fish Market 雪梨魚市場</span><span class="badges"><span class="badge type-food">海鮮聖地</span></span></div>
+<div class="spot-desc">早起（約10:30）直奔南半球最大的魚市場，現點起司焗龍蝦、新鮮生蠔、黑金鮑及生魚片，享受海膽配生蠔的極致美味。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Sydney+Fish+Market" target="_blank">🦐 魚市場定位</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Sydney+Fish+Market+Parking" target="_blank">🅿️ 導航至魚市場付費停車場</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🏛️ The University of Sydney 雪梨大學</span><span class="badges"><span class="badge type-culture">魔法學院風格</span><span class="badge type-city">網美拍照</span></span></div>
+<div class="spot-desc">參觀被網友暱稱為「哈利波特魔法學院」的 Quadrangle 大樓，古典英國新哥德式砂岩建築群，拍照氛圍極佳，能帶孩子提前感受世界頂尖學府氣息。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=The+University+of+Sydney+Quadrangle" target="_blank">🏛️ 魔法學院大樓定位</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=The+University+of+Sydney+Car+Park" target="_blank">🅿️ 導航至校園付費停車場</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🐨 Taronga Zoo 塔龍加動物園（看動物 + 遠眺雪梨港夕陽）</span><span class="badges"><span class="badge type-wildlife">澳洲本土動物</span><span class="badge type-nature">無敵海港海景</span></span></div>
+<div class="spot-desc">雪梨最著名動物園。不僅能近距離看無尾熊、鴨嘴獸、餵袋鼠，最棒的是動物園居高臨下。在日落時分可以一邊看著長頸鹿，一邊觀賞黃金光線下的雪梨歌劇院與海港大橋。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Taronga+Zoo+Sydney" target="_blank">🐨 動物園定位</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Taronga+Zoo+Parking" target="_blank">🅿️ 導航至動物園收費停車場</a>
+</div>
+</div></div>
+
+<div class="meals"><div class="meals-title">🍽 DAY 5 餐飲</div>
+<div class="meal-row"><span class="meal-label breakfast">早</span><span class="meal-text">輕便自理</span></div>
+<div class="meal-row"><span class="meal-label lunch">午</span><span class="meal-text">雪梨魚市場豐富的海鮮盛宴（現點焗烤龍蝦、生蠔與海膽配生魚片）</span></div>
+<div class="meal-row"><span class="meal-label dinner">晚</span><span class="meal-text">在市區/達令港港邊享用優雅的西餐，歡送雪梨的最後一晚</span></div></div>
+
+<div class="hotel"><div class="hotel-icon">🏨</div><div><div class="hotel-label">雪梨住宿</div><div class="hotel-name">YEHS Hotel Sydney Harbour Suites（最後一晚）</div><div class="hotel-desc">今晚整理大件行李，為明天的內陸跨州飛航做準備。</div></div></div>
+</div></div>
+
+
+<!-- DAY 6 -->
+<div class="day-block" id="day6">
+<div class="day-header d6"><div><h2>Day 6 ｜ 7月29日（週三）</h2><div class="day-sub">雪梨 Checkout → 還車 → 飛墨爾本 → 抵達入住</div></div><div class="day-sub">✈️ 轉場關鍵日</div></div>
+<div class="day-body">
+
+<div class="infobox warn"><h4>⏰ 轉場精準時間軸（請嚴格遵守）</h4>
+<p>🏨 **09:30 - 11:30**：YEHS Hotel 退房辦理，裝載行李上車。</p>
+<p>🚗 **11:30 - 12:00**：開車前往雪梨機場租車點还車 ➔ <a href="https://www.google.com/maps/search/?api=1&query=Everything+Fleet+Sydney+Airport" target="_blank">🗺️ 機場還車點導航</a></p>
+<p>✈️ **12:00 - 12:30**：完成還車，12:30 前抵達雪梨國內 T2/T3 航站辦理行李託運。</p>
+<p>✈️ **14:20 - 15:55**：搭乘 **捷星 JQ519** 飛往墨爾本（飛行時間 1h35m）。</p>
+<p>🚗 **17:00**：墨爾本國內航廈（MEL T4）提取 Agoda 租車（Elaine 預訂，SUV車型）➔ <a href="https://www.google.com/maps/search/?api=1&query=Melbourne+Airport+Terminal+4" target="_blank">🗺️ 墨爾本機場取車點導航</a></p>
+<p>🏨 **18:00**：駕車開往墨爾本市區飯店 Check-in，安置行李。</p></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌆 墨爾本南岸散步（Southbank Walk）</span><span class="badges"><span class="badge type-city">初探墨城</span></span></div>
+<div class="spot-desc">晚上出門散步，感受與雪梨截然不同的文化之都魅力。沿著亞拉河畔步行到 Southbank 或唐人街用餐。</div>
+</div></div>
+
+<div class="meals"><div class="meals-title">🍽 DAY 6 餐飲</div>
+<div class="meal-row"><span class="meal-label breakfast">早</span><span class="meal-text">飯店自理</span></div>
+<div class="meal-row"><span class="meal-label lunch">午</span><span class="meal-text">雪梨機場國內航站簡單快餐</span></div>
+<div class="meal-row"><span class="meal-label dinner">晚</span><span class="meal-text">墨爾本<b>唐人街 (Chinatown)</b> 亞洲料理，或 <b>Southbank</b> 景觀意法餐廳 ➔ <a href="https://www.google.com/maps/search/?api=1&query=Chinatown+Melbourne+Restaurants" target="_blank">🗺️ 導航至唐人街美食區</a></span></div></div>
+
+<div class="hotel"><div class="hotel-icon">🏨</div><div><div class="hotel-label">今晚起住宿｜墨爾本（連住 5 晚）</div><div class="hotel-name">Aura on Flinders Serviced Apartments</div><div class="hotel-desc"><b>已訂✓</b> 大概位置：墨爾本市中心（Flinders St，靠近南十字星車站）[cite: 1]。鄰近弗林德斯車站、Southbank，連住5晚無須搬行李。<br>
+➔ <a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Aura+on+Flinders+Serviced+Apartments" target="_blank">🗺️ 導航至飯店</a> 
+｜ 🅿️ <a class="info-chip book" href="https://www.google.com/maps/search/?api=1&query=Care+Park+Siddeley+St+Melbourne" target="_blank">🅿️ 周邊推薦付費停車場 (Care Park Siddeley St)</a></div></div></div>
+</div></div>
+
+
+<!-- DAY 7 -->
+<div class="day-block" id="day7">
+<div class="day-header d7"><div><h2>Day 7 ｜ 7月30日（週四）</h2><div class="day-sub">丹頂農童話小鎮 + 瑪魯野生動物園 + 菲利普島企鵝歸巢（黃金升級一日遊）</div></div><div class="day-sub">避開週末人潮・自駕全程約 4-5 小時</div></div>
+<div class="day-body">
+
+<div class="tips-box" style="background:#e4f5f0;border-color:#9fe1cb;"><div class="tips-title" style="color:#0d8a6e;">🚂 超悠閒一日自駕動線</div><ul>
+<li>10:00 睡飽出發 ➔ 11:00 **丹頂農山區童話小鎮** ➔ 12:00 吃全維州第一名的**手工金牌派** ➔ 14:15 **瑪魯野生動物園** ➔ 15:45 菲利普島 **Nobbies 觀景台** ➔ 16:15 準備進入 **企鵝歸巢**卡位。</li>
+</ul></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌸 丹頂農山脈童話小鎮（Olinda & Sassafras）</span><span class="badges"><span class="badge type-nature">山林風光</span><span class="badge type-culture">英倫童話鎮</span></span></div>
+<div class="spot-desc">穿梭在鬱鬱蔥蔥的丹頂農山脈中。Olinda 和 Sassafras 是兩個充滿歐風氣息的山中寶藏小鎮，主街佈滿手工甜點店、木偶店與精緻古董鋪，漫步其間非常療癒，女兒們會逛到捨不得走。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Olinda+Victoria" target="_blank">🌸 導航至 Olinda 小鎮中心</a>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Olinda+Public+Parking" target="_blank">🅿️ 導航至小鎮大眾公共停車場</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🥧 Pie-in-the-Sky（午餐）</span><span class="badges"><span class="badge type-food">金牌手工派</span></span></div>
+<div class="spot-desc"><b>【丹頂農山區 Olinda 小鎮主街】</b> 榮獲多次維多利亞州金牌冠軍的手工派專賣店！香酥鬆軟、層次分明的酥皮，包裹著飽滿多汁的招牌牛肉派或燉牛肉起司派，熱騰騰下肚是冬日裡最完美的享受。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Pie+in+the+Sky+Olinda" target="_blank">🗺️ 導航至店家</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🦘 瑪魯野生動物園 Maru Koala and Animal Park</span><span class="badges"><span class="badge type-wildlife">超近距離接觸</span><span class="badge type-nature">親手餵袋鼠</span></span></div>
+<div class="spot-desc">互動性極高的精緻野生動物園！全家人可以親手拿飼料餵食溫馴散養的袋鼠、撫摸草地上的羊駝，更能以極近距離跟超級無尾熊合影留念，深受女兒們喜愛。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Maru+Koala+and+Animal+Park" target="_blank">🦘 導航至動物園入口</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🌊 Nobbies 觀景台海豹岩</span><span class="badges"><span class="badge type-nature">狂野海岸線</span></span></div>
+<div class="spot-desc">開車過橋登島，直奔西端壯麗的懸崖木棧道。冬天的巴斯海峽海浪驚濤拍岸，十分雄偉。記得往下看，岩石縫和木棧道下方常能找到正在呼呼大睡的野生神仙小企鵝。</div>
+<div class="spot-info">
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=The+Nobbies+Centre+Parking" target="_blank">🅿️ 導航至 The Nobbies 遊客中心免費停車場</a>
+</div>
+</div></div>
+
+<div class="spot"><div class="spot-content">
+<div class="spot-top"><span class="spot-name">🐧 Penguin Parade 菲利普島企鵝歸巢（世界級奇觀）</span><span class="badges"><span class="badge type-wildlife">必看招牌</span><span class="badge type-nature">震撼體驗</span></span></div>
+<div class="spot-desc">冬季小企鵝約 17:00 ~ 17:30 集體衝過沙灘返巢。**務必於 16:15 前入場**，普通看台建議坐在**面向沙灘靠右側（最靠近 Penguins Plus VIP 通道一側）**，這個方向能以極近距離目送成群企鵝從小腳丫旁搖擺走過。看完後約 19:00 開車返程，21:00 回到市區飯店。</div>
+<div class="spot-info">
+<span class="info-chip">🎫 須提早官網購票</span>
+<a class="info-chip map" href="https://www.google.com/maps/search/?api=1&query=Phillip+Island+Penguin+Parade+Parking" target="_blank">🅿️ 導航至企鵝歸巢專屬巨型停車場</a>
+<a class="info-chip book" href="https://www.penguins.org.au/attractions/penguin-parade/" target="_blank">🔗 官網門票預訂</a>
+</div>
+</div></div>
+
+<div class="meals"><div class="meals-title">🍽 DAY 7 餐飲</div>
+<div class="meal-row"><span class="meal-label breakfast">早</span><span class="meal-text">自理，悠閒睡飽出發</span></div>
+<div class="meal-row"><span class="meal-label lunch">午</span><span class="meal-text"><b>Pie-in-the-Sky（丹頂農山區 Olinda 小鎮）</b> 金牌冠軍手工牛肉派、蘋果派與熱茶</span></div>
+<div class="meal-row"><span class="meal-label dinner">晚</span><span class="meal-text">自備一些三明治與熱水帶去企鵝看台。看完後回墨爾本市區吃宵夜或熱湯麵</span></div></div>
+
+<div class="hotel"><div class="hotel-icon">🏨</div><div><div class="hotel-label">墨爾本住宿</div><div class="hotel-name">Aura on Flinders Serviced Apartments（續住）</div></div></div>
+</div></div>
+
+
+<!-- MELBOURNE CITY DAYS (HTML WRAPPER STYLE) -->
+<div class="melwrap">
+
+<!-- DAY 8 -->
+<div class="day-head d1" id="day8"><h2>Day 8 ｜ 7月31日（週五）｜市區地標 + QV Market</h2><div class="ds">全程免費電車 + 步行（車子停在市區停車場不動，免去塞車和過路費）</div></div>
+<div class="day-body">
+
+<div class="drive" style="background:#e8f4fd;color:#1565c0;padding:12px 18px;font-size:13px;">🚊 <b>墨爾本 CBD 免費電車區 (Free Tram Zone)</b>。墨爾本市中心內搭乘所有電車皆免費，上下車完全不需要刷卡（Myki 卡），景點間步行 5-15 分鐘可達。</div>
+
+<div class="item"><div class="time">09:00<div class="dur">~2hr</div></div><div class="body">
+<h3>🛒 維多利亞女王市場 Queen Victoria Market</h3>
+<p>建於1878年，是南半球最大、最古老的露天市場。走進老式肉品海鮮廳感受生活氣氛。必買：McIvers 咖啡豆（現場研磨帶回台），以及到 Bottle Shop 採買維多利亞州在地精釀啤酒（推薦 Balter 或 Mountain Culture）。⚠️ 週五開放到 15:00，必須早上前往。</p>
+<div class="chips">
+<span class="chip">🕙 週五 6:00–15:00</span>
+<span class="chip eat">☕ McIvers 咖啡</span>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Queen+Victoria+Market+Parking" target="_blank">🅿️ 導航至市場露天大停車場</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">11:30<div class="dur">~1hr</div></div><div class="body">
+<h3>☕ 墨爾本靈魂：Degraves Street / Hardware Lane</h3>
+<p>深入墨爾本的巷弄咖啡文化，狹窄街道排滿歐風露天座椅，來一杯經典 Flat White 搭配澳式早午餐。</p>
+<div class="chips">
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Degraves+Street+Melbourne" target="_blank">🗺️ 導航至 Degraves St 咖啡巷</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">13:00<div class="dur">~2hr</div></div><div class="body">
+<h3>🏙️ 弗林德斯街車站 → 聯邦廣場 → Hosier 塗鴉巷</h3>
+<p>拍攝黃色巴洛克風格地標「弗林德斯街車站」，對面即是當代前衛的聯邦廣場，隨後步入墨爾本最出名的露天塗鴉藝術弄——**Hosier Lane**（女兒拍照黃金景點）。</p>
+<div class="chips">
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Flinders+Street+Station" target="_blank">車站導航</a>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Hosier+Lane+Melbourne" target="_blank">塗鴉巷導航</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">15:30<div class="dur">~1.5hr</div></div><div class="body">
+<h3>🏛️ 皇家拱廊 Royal Arcade + 百年 Block Arcade 下午茶</h3>
+<p>走進19世紀富麗堂皇的圓頂拱廊，拍高挑精緻的挑高天花板與大鐘。可至 Block Arcade 內著名的 Hopetoun Tea Rooms 欣賞極美的甜點廚窗。</p>
+<div class="chips">
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=The+Block+Arcade+Melbourne" target="_blank">🏛️ 拱廊入口導航</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">17:00<div class="dur">~1.5hr</div></div><div class="body">
+<h3>🗼 Eureka Skydeck 尤里卡天空塔（88樓看絕美夜景）</h3>
+<p>南半球最高的觀景台，俯瞰整條亞拉河與墨爾本全景。正值冬季日落較早，17:00上塔正好可將落日餘暉與璀璨夜景一次收藏。</p>
+<div class="chips">
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Melbourne+Skydeck" target="_blank">🗼 觀景台入口導航</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">晚餐</div><div class="body">
+<h3>🍽 Day 8 晚餐：Lygon Street 義大利餐館街</h3>
+<p>搭乘電車前往 Carlton 區的 Lygon Street，品嚐墨爾本最正宗的柴燒窯烤披薩與自製義大利麵。</p>
+<div class="chips">
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Lygon+Street+Carlton+Restaurants" target="_blank">🍽️ 導航至義大利街中心</a>
+</div>
+</div></div>
+
+</div>
+
+
+<!-- DAY 9 -->
+<div class="day-head d2" id="day9"><h2>Day 9 ｜ 8月1日（週六）｜Fitzroy 文青市集 → St Kilda 海灘 → 傍晚活動二選一</h2><div class="ds">下午搭乘經典 96 路電車直達海灘・傍晚冬日溫暖大戲</div></div>
+<div class="day-body">
+
+<div class="item"><div class="time">09:00<div class="dur">~3hr</div></div><div class="body">
+<h3>🎨 Fitzroy 嬉皮文青區（Brunswick St + Rose St 藝術市集）</h3>
+<p>
+① **Lune Croissanterie**（位於 Fitzroy 區）：被紐約時報讚譽為「世界最好吃可頌」，朝聖招牌香酥杏仁可頌。<br>
+② **Rose St Artists' Market**：週六限定手作市集，由當地藝術家現場擺攤，販售手工皮包、原創插畫及飾品。<br>
+③ **Brunswick St 塗鴉小巷**：極富生活張力的彩色壁畫與特色黑膠二手店，女孩子一定會拍爆！
+</p>
+<div class="chips">
+<span class="chip star">🛒 週六限定手作市集</span>
+<a class="chip eat" href="https://www.google.com/maps/search/?api=1&query=Lune+Croissanterie+Fitzroy" target="_blank">🥐 Lune可頌導航</a>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Rose+St+Artists+Market" target="_blank">🎨 藝術市集導航</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">12:30<div class="dur">~2hr</div></div><div class="body">
+<h3>🌊 Southbank 散步 + 亞拉河畔午餐</h3>
+<p>過王子橋到亞拉河南岸，可至 **Ponyfish Island**（一座隱藏在行人橋下小島上的神祕酒吧）或在 Southgate 美食區用餐，看著兩側摩天大樓倒映在河面上。</p>
+<div class="chips">
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Ponyfish+Island" target="_blank">🍹 Ponyfish酒吧導航</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">15:30<div class="dur">~1.5hr</div></div><div class="body">
+<h3>🏖️ St Kilda 海灘 + Acland St 蛋糕甜點街</h3>
+<p>搭乘經典 96 路電車直達海灘，在 Acland Street 街上觀看一整排浮誇的意式大蛋糕櫥窗。散步到沙灘，跟最經典的 Luna Park 大笑臉入口合影留念。</p>
+<div class="chips">
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Acland+Street+St+Kilda" target="_blank">🍰 蛋糕街導航</a>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=St+Kilda+Beach+Parking" target="_blank">🏖️ 海灘免費公共停車場</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time" style="background:#fff3e0;">17:00<div class="dur" style="color:#e65100;">當天決定</div></div><div class="body">
+<h3>🔥 傍晚冬夜活動現場二選一（皆已完整保留細節）</h3>
+<p><b>【方案 A：Lightscape 2026 皇家植物園冬季光影藝術節】</b>➔ <a class="chip map" style="display:inline-block; margin-bottom:5px;" href="https://www.google.com/maps/search/?api=1&query=Royal+Botanic+Gardens+Victoria" target="_blank">🗺️ 導航至皇家植物園入口</a><br>
+2026 年閉幕倒數第二晚（展期至8/2）！皇家植物園化作魔幻夜森林，漫步於發光拱廊、巨型夜光大教堂步道。沿途小木屋有熱巧克力、烤棉花糖與熱紅酒，在悠揚音樂與絢麗光影中享受溫馨冬夜，網美照拍到停不下來！（須上官網預訂 17:45 或 18:00 入場券）
+</p>
+<p style="margin-top:10px;"><b>【方案 B：南岸亞拉河畔火焰秀 + 義大利街窯烤晚餐】</b>➔ <a class="chip map" style="display:inline-block; margin-bottom:5px;" href="https://www.google.com/maps/search/?api=1&query=Crown+Melbournes+Gas+Brigade+Show" target="_blank">🔥 導航至河畔噴火柱觀景點</a><br>
+不走戶外，直接回市區南岸（Southbank）漫步。冬夜 18:00 起每個整點，河畔巨型噴火柱 **Gas Brigades（火焰秀）** 會噴射出滾滾烈火火球照亮夜空，熱氣迎面而來，暖洋洋又無比壯觀。隨後搭電車前往 Carlton 區的 **Lygon Street** ➔ <a href="https://www.google.com/maps/search/?api=1&query=Lygon+Street+Carlton" target="_blank">🗺️ 導航至義大利街餐廳區</a>，坐在暖氣充足的窯烤爐旁，來一頓熱騰騰的義大利手工披薩與海鮮義大利麵，徹底溫暖身心。
+</p>
+</div></div>
+
+</div>
+
+
+<!-- DAY 10 -->
+<div class="day-head d3" id="day10"><h2>Day 10 ｜ 8月2日（週日）｜墨爾本最後一天「雙黃金備案保留」</h2><div class="ds">無時間壓力・看天氣與全家心情現場二選一</div></div>
+<div class="day-body">
+
+<div class="item"><div class="time" style="background:#f3e5f5; color:#4a148c;">備案A<div class="dur">網美+血拼</div></div><div class="body">
+<h3>🌟 方案 A：布萊頓彩虹小屋 ➔ 南半球最大商場 Chadstone 大採購</h3>
+<p><b>① Brighton Beach Bathing Boxes (彩虹小屋)</b>：墨爾本最經典的彩色沙灘。一整排 82 間色彩明豔、各種彩繪圖騰的百年木造更衣室。冬天的晨光柔和，幫女兒們拍出超級適合發 IG 的明信片網美照，全家合影首選！</p>
+<p style="margin-top:8px;"><b>② Chadstone - The Fashion Capital</b>：避寒最佳去處，南半球最大、最奢華的玻璃穹頂巨型購物商場！550多家店舖，從頂級名牌、高街快時尚到澳洲在地潮流設計、羊毛製品、Koko Black 巧克力與 Jurlique 應有盡有。裡面設有高質感美食街，可以暖呼呼地度過血拼的一天，將伴手禮與戰利品一次買齊，回飯店直接裝箱。</p>
+<div class="chips">
+<span class="chip">🚗 彩虹小屋距市區約25分</span>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Brighton+Bathing+Boxes+Green+Point+Parking" target="_blank">🅿️ 導航至彩虹小屋最優觀景停車場 (Green Point Parking)</a>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Chadstone+Shopping+Centre+Parking" target="_blank">🅿️ 導航至 Chadstone 大型商場室內停車場</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time" style="background:#e4f5f0; color:#0d8a6e;">備案B<div class="dur">美酒+美食</div></div><div class="body">
+<h3>🌟 方案 B：亞拉河谷優雅深度一日遊（Domaine Chandon ＋ 巧克力工坊）</h3>
+<p><b>① Domaine Chandon（頂級酒莊午餐品酒）</b>：酩悅軒尼詩旗下最著名的冷涼氣候頂級酒莊。坐在擁有巨型挑高拱形落地窗的優雅餐廳內，正對著冬日極富詩意的連綿葡萄園。大人品嚐頂級 Sparkling Wine，孩子們喝優質葡萄汁，在這裡享用一頓精緻優雅的莊園法式午餐，把度假儀式感直接拉滿！</p>
+<p style="margin-top:8px;"><b>② Yarra Valley Chocolaterie（巧克力與冰淇淋工坊）</b>：擁有250多種精美的手工巧克力，店內提供大盆的巧克力**免費試吃**。雖然是冬天，但招牌的香濃義式 Gelato 冰淇淋好吃到全家人都無法拒絕，最適合在此選購造型討喜、極具澳洲風情的伴手禮盒。</p>
+<p style="margin-top:8px;"><b>③ 傍晚 DFO South Wharf</b>：回程途中開車順路經過，若還有採購精力，可以直衝暢貨中心進行離澳前最後的折扣捕撈。</p>
+<div class="chips">
+<span class="chip">🍷 Domaine Chandon 須提早訂位</span>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Domaine+Chandon+Yarra+Valley" target="_blank">🍷 導航至 Domaine Chandon 酒莊</a>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=Yarra+Valley+Chocolaterie" target="_blank">🍫 導航至巧克力冰淇淋工坊</a>
+<a class="chip map" href="https://www.google.com/maps/search/?api=1&query=DFO+South+Wharf+Parking" target="_blank">🅿️ 導航至 DFO South Wharf 的停車場</a>
+</div>
+</div></div>
+
+</div>
+
+</div> <!-- END OF MELWRAP -->
+
+
+<!-- DAY 11 -->
+<div class="day-block" id="day11" style="margin-top:28px;">
+<div class="day-header d11"><div><h2>Day 11 ｜ 8月3日（週一）</h2><div class="day-sub">墨爾本 Checkout → 機場還車 → 國內線至雪梨 → 轉機台北</div></div><div class="day-sub">✈️ 跨國跨州超安全銜接</div></div>
+<div class="day-body">
+
+<div class="infobox flight" style="background:#fff3e0; border-color:#ffe0b2;"><h4>✈️ 國內轉接航班｜捷星航空 JQ520（不可變動）</h4>
+<p>📍 墨爾本國內 T4 → 雪梨 SYD 國內航廈</p>
+<p>🕙 **起飛 2026-08-03 15:00 ／ 抵達雪梨 16:25**</p></div>
+
+<div class="infobox flight"><h4>✈️ 回程國際航班｜中華航空營運（實際由澳航代售）</h4>
+<p>📍 雪梨 SYD 國際航廈 T1 → 台北桃園 TPE 航廈2</p>
+<p>🕙 **起飛 2026-08-03 22:10 ／ 抵達台北 05:40**（隔日晨）</p>
+<p>✈️ 直飛 9小時30分・託運 30kg</p></div>
+
+<div class="tips-box" style="background:#e8f5e9;border-color:#c8e6c9;"><div class="tips-title" style="color:#2e7d32;">⏱️ 今日機場銜接流暢度說明</div><ul>
+<li><b>10:30 - 11:30</b>：辦理 Aura on Flinders 退房，開車前往墨爾本機場（預留 30-45 分鐘路程）。[cite: 1]</li>
+<li><b>12:30</b>：在墨爾本機場**完成還車手續**（Elaine 預訂，確保是機場內還車）➔ <a class="info-chip map" style="display:inline;" href="https://www.google.com/maps/search/?api=1&query=Melbourne+Airport+Car+Rental+Return" target="_blank">🚗 導航至墨爾本機場租車還車點</a>[cite: 1]</li>
+<li><b>13:00</b>：抵達捷星 T4 航廈辦理國內託運（提前2小時非常充裕且放鬆）。[cite: 1]</li>
+<li><b>16:25 - 22:10</b>：在雪梨機場有極其充裕的 **5 小時 45 分鐘**。可以悠閒地搭接駁車或火車換到國際航站 T1[cite: 1]、排隊辦理 QF8729/華航登機手續、有足夠時間辦理 TRS 購物退稅，並在機場享用高質感的晚餐[cite: 1]。</li>
+</ul></div>
+
+</div></div>
+
+
+<!-- SHOPPING -->
+<div class="section-title" id="shopping"><span class="icon" style="background:#c87d10;">🛍️</span>雙城 DFO 與購物攻略</div>
+<table class="addr-table">
+<tr><th>商場名稱</th><th>城市與交通</th><th>特色</th><th>最佳攻略與導航</th></tr>
+<tr><td><b>DFO Homebush</b></td><td>雪梨 西區<br>(自駕方便)</td><td>雪梨最大暢貨中心，有 Polo、Michael Kors、各種運動潮牌與女裝。</td><td>安排在 **Day 4 藍山回程順路自駕前往**，買完直接車載回飯店最輕鬆 ➔ <a class="info-chip map" style="display:inline-block;" href="https://www.google.com/maps/search/?api=1&query=DFO+Homebush+Parking" target="_blank">🅿️ 導航</a>[cite: 1]。</td></tr>
+<tr><td><b>DFO South Wharf</b></td><td>墨爾本 市區旁<br>(步行可達)</td><td>緊鄰市區亞拉河，180+品牌，運動與國際輕奢品牌齊全。</td><td>因就在 Aura 飯店附近，可利用 **Day 8 或 Day 9 的市區空檔**隨時走過去血拼 ➔ <a class="info-chip map" style="display:inline-block;" href="https://www.google.com/maps/search/?api=1&query=DFO+South+Wharf+Parking" target="_blank">🅿️ 導航</a>。</td></tr>
+<tr><td><b>TRS 退稅 (Tourist Refund Scheme)</b></td><td>雪梨機場 T1<br>(離境手續)</td><td>單一店家（同 ABN 號碼）滿 **AUD 300**（限離境前 60 天內購買），可退回 10% 的 GST 消費稅。</td><td>發票要留好，建議提前下載 **TRS APP** 填寫資料，在 T1 退稅時走 QR Code 快速通道。**Day 11 下午5個多小時轉機時間，足夠你悠閒退稅** ➔ <a class="info-chip map" style="display:inline-block;" href="https://www.google.com/maps/search/?api=1&query=Sydney+Airport+T1+International+Terminal" target="_blank">🗺️ 雪梨T1國際航站導航</a>[cite: 1]。</td></tr>
+</table>
+
+</div>
+<footer>澳洲自駕旅遊書 · 2026/7/24–8/3 · 雪梨5天 + 太平洋公路 + 墨爾本5天 · 四人家庭版</footer>
+<script>
+(function(){
+  // Cloudflare Worker 代理（金鑰存在 CF 後端，不在此檔案）
+  const AI_ENDPOINT = "https://au2026-ai.wentaiwalker.workers.dev";
+
+  const q = document.getElementById('ai-q');
+  const send = document.getElementById('ai-send');
+  const ans = document.getElementById('ai-answer');
+
+  // 載入時擷取一次網頁可見文字，作為 AI 回答的依據（grounding）
+  let pageContext = "";
+  function buildContext(){
+    const t = (document.body.innerText || "").replace(/[ \t]{2,}/g,' ').replace(/\n{3,}/g,'\n\n').trim();
+    pageContext = t.slice(0, 48000);
+  }
+
+  function showLoading(){
+    send.disabled = true;
+    ans.className = 'show';
+    ans.innerHTML = '<span class="ai-loading">小幫手思考中<span class="ai-dot"></span><span class="ai-dot"></span><span class="ai-dot"></span></span>';
+  }
+  // 先做 HTML escape 再轉簡易 markdown（**粗體**），避免星號原样顯示也確保安全
+  function mdLite(text){
+    const esc = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return esc.replace(/\*\*([^*\n]+)\*\*/g,'<b>$1</b>').replace(/(^|\n)\s*[*•]\s+/g,'$1・');
+  }
+  function showAnswer(text, isErr){
+    ans.className = 'show' + (isErr ? ' err' : '');
+    if(isErr){ ans.textContent = text; }
+    else { ans.innerHTML = mdLite(text); }
+    // 手機上鍵盤常擋住答案：回答出現時自動捲到答案處
+    ans.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  async function ask(){
+    const question = (q.value || '').trim();
+    if(!question){ q.focus(); return; }
+    if(!pageContext) buildContext();
+    q.blur(); // 收起手機鍵盤，避免擋住答案
+    showLoading();
+    try{
+      const r = await fetch(AI_ENDPOINT, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ question: question, context: pageContext })
+      });
+      const data = await r.json().catch(function(){ return {}; });
+      if(!r.ok || data.error){
+        showAnswer('⚠️ ' + (data.error || ('發生錯誤（' + r.status + '）')), true);
+      } else {
+        showAnswer(data.answer || '（沒有收到回答）', false);
+      }
+    } catch(e){
+      showAnswer('⚠️ 無法連線，請檢查網路後再試一次。', true);
+    } finally {
+      send.disabled = false;
+    }
+  }
+
+  send.addEventListener('click', ask);
+  q.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); ask(); } });
+  document.querySelectorAll('.ai-chip').forEach(function(c){
+    c.addEventListener('click', function(){ q.value = c.textContent; ask(); });
+  });
+  window.addEventListener('load', buildContext);
+})();
+</script>
+</body>
+</html>
